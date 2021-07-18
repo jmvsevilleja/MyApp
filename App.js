@@ -2,15 +2,22 @@ import {StatusBar} from 'expo-status-bar';
 import React from 'react';
 import {
   StyleSheet, Text,
-  //TouchableWithoutFeedback,
-  //TouchableOpacity,
+  //TouchanbleWithoutFeedback,
+  //TouchableOpacity,≠
   TouchableHighlight,
-  Image, View, SafeAreaView
+  Image, View, SafeAreaView,
+  Button, Platform, Dimensions,
 } from 'react-native';
+import {useDimensions, useDeviceOrientation } from '@react-native-community/hooks'
 
 export default function App() {
   let x = 1;
   console.log('App executed');
+  // react dimensions
+  console.log('get screen:', Dimensions.get("screen"));
+  // hooks dimensions
+  console.log('useDimension: ',useDimensions());
+  console.log('useOrientation', useDeviceOrientation());
 
   const handlePress = () => {
     console.log("Text Pressed")
@@ -20,7 +27,7 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView style={[styles.container, otherStyle]}>
+    <SafeAreaView style={[styles.container, overrideStyle]}>
       <Text>Hello World</Text>
       <Text onPress={handlePress}>Click Me!</Text>
       {/* Static Image */}
@@ -35,19 +42,32 @@ export default function App() {
           }}
         />
       </TouchableHighlight>
-
-
+      <Button 
+      color="blue" 
+      title="Button" 
+      onPress={()=>alert('Button Pressed')} 
+      />
+      <View style={{
+        backgroundColor:"#f00",
+        width: "100%",
+        height: 70,}} 
+      >
+        
+      </View>
+      
       <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
-const otherStyle = {backgroundColor: "#ccc"}
-
+const overrideStyle = {backgroundColor: "#ccc"} 
+// OS
+console.log(Platform.OS)
+console.log(StatusBar.height) // null in IOS
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 10 // ios not affected
   },
 });
