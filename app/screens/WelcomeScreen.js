@@ -1,6 +1,7 @@
 import React from 'react';
 import {ImageBackground, StyleSheet} from 'react-native';
 
+// React Stateless Function
 function WelcomeScreen(props) {
     return (
         <ImageBackground

@@ -98,7 +98,7 @@ export default function App() {
       <Text>Hello World</Text>
       <Text onPress={handlePress}>Click Me!</Text>
       {/* Static Image */}
-      <Image source={require("./app/assets/favicon.png")} />
+      <Image source={require("./assets/favicon.png")} />
       {/* Network Image */}
 
       <TouchableHighlight onPress={handleImagePress}>
