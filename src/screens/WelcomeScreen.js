@@ -6,7 +6,7 @@ function WelcomeScreen(props) {
     return (
         <ImageBackground
             style={style.background}
-            source={require("../../assets/icon.png")}
+            source={require("../../assets/adaptive-icon.png")}
         ></ImageBackground>
     );
 }

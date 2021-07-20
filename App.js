@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 // Hooks
 import {useDimensions, useDeviceOrientation} from '@react-native-community/hooks'
-import WelcomeScreen from './app/screens/WelcomeScreen';
+import WelcomeScreen from '@screens/WelcomeScreen';
 
 export default function App() {
   let x = 1;
