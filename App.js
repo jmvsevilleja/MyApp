@@ -11,7 +11,7 @@ import {
 // Hooks
 import {useDimensions, useDeviceOrientation} from '@react-native-community/hooks'
 import WelcomeScreen from '@screens/WelcomeScreen';
-import TailwindScreen from './src/screens/TailwindScreen';
+import TailwindScreen from '@screens/TailwindScreen';
 
 export default function App() {
   let x = 1;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, View, Text} from 'react-native';
-import tailwind from 'tailwind-rn';
+import {tailwind} from '@lib/tailwind';
 
 // React Stateless Function
 function TailwindScreen(props) {
