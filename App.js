@@ -12,6 +12,7 @@ import {
 import {useDimensions, useDeviceOrientation} from '@react-native-community/hooks'
 import WelcomeScreen from '@screens/WelcomeScreen';
 import TailwindScreen from '@screens/TailwindScreen';
+import LoginScreen from '@screens/LoginScreen';
 
 export default function App() {
   let x = 1;
@@ -31,6 +32,7 @@ export default function App() {
   // object destructuring
   const {landscape} = useDeviceOrientation();
   return (
+    // <LoginScreen />
     <TailwindScreen />
     // <WelcomeScreen />
   );
