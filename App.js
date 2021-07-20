@@ -32,6 +32,7 @@ export default function App() {
   const {landscape} = useDeviceOrientation();
   return (
     <TailwindScreen />
+    // <WelcomeScreen />
   );
   // return (
   //   <View
